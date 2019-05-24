@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+ 
+ <style>
+         table, th , td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+         }
+         table tr:nth-child(odd) {
+            background-color: #f2f2f2;
+         }
+         table tr:nth-child(even) {
+            background-color: #ffffff;
+         }
+      </style>
+
+<head>
+  <meta charset="utf-8" />
+  <title>AngularJS Plunker</title>
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+
+  <script  src="https://code.angularjs.org/1.2.22/angular.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body ng-controller="MainCtrl">
+  <table class="table table-striped">
+    <tbody>
+      <tr ng-repeat="item in items">
+        <td>{{item.name}}</td>
+        <td>{{item.sub1}}</td>
+        <td>{{item.sub2}}</td>
+        <td>{{item.sub3}}</td>
+        
+      </tr>
+      <tr>
+        <td>Total:</td>
+        <td>{{getTotal('sub1')}}</td>
+        <td>{{getTotal('sub2')}}</td>
+        <td>{{getTotal('sub3')}}</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
