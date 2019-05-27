@@ -17,7 +17,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>AngularJS Plunker</title>
+  <title>AngularJS</title>
   <script>
     document.write('<base href="' + document.location + '" />');
   </script>
@@ -29,19 +29,31 @@
 <body ng-controller="MainCtrl">
   <table class="table table-striped">
     <tbody>
+      <tr>
+        <th>Name</th>
+        <th>Sub1</th>
+        <th>Sub2</th>
+        <th>Sub3</th>
+        <th>Total</th>
+        
+	  </tr>
       <tr ng-repeat="item in items">
         <td>{{item.name}}</td>
         <td>{{item.sub1}}</td>
         <td>{{item.sub2}}</td>
         <td>{{item.sub3}}</td>
-        
+     
+        <td>{{item.sub1+item.sub2+item.sub3}}</td>
+     
       </tr>
+   
       <tr>
         <td>Total:</td>
         <td>{{getTotal('sub1')}}</td>
         <td>{{getTotal('sub2')}}</td>
         <td>{{getTotal('sub3')}}</td>
       </tr>
+     
     </tbody>
   </table>
 </body>
